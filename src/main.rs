@@ -1,8 +1,13 @@
 use std::process::{Command,exit, Output};
-
+use std::env::{Args,args};
 
 fn main() {
-    update_commit_push("start","master")
+
+    let mut args:Args = args();
+    let branch:String = args.nth(1).unwrap();
+    let message:String = args.nth(0).unwrap();
+
+    update_commit_push(&message,&branch);
 }
 
 
