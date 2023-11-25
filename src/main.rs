@@ -37,7 +37,7 @@ fn update_commit_push(message: &str,branch:&str) {
         exit(1);
     }
 
-    let push_command =  Command::new("git")
+    let push_command =  Command::new("githb")
     .arg("push")
     .arg("origin")
     .arg(branch)
