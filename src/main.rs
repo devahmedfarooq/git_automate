@@ -7,7 +7,7 @@ fn main() {
     let branch:String = args.nth(1).unwrap();
     let message:String = args.nth(0).unwrap();
 
-    update_commit_push(&message,&branch);
+    update_commit_push(&message,&branch); 
 }
 
 
@@ -50,7 +50,7 @@ fn update_commit_push(message: &str,branch:&str) {
     }
 
     if !branch.is_empty() & !message.is_empty() {
-        println!("Sucessfully pushed changes to {} with message {}",branch,message);
+        println!("Sucessfully pushed changes to {} with message => {}",branch,message);
 
     }
 }
